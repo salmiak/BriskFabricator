@@ -1,0 +1,43 @@
+h1,h2,h3,h4,h5,h6 {
+	margin: 0 0 0.65em;
+}
+h1 {
+	font: 300 25px/1.2em $fontstack;
+}
+h2 {
+	  font: 900 15px/20px $fontstack;
+	  @extend .capitals;
+}
+h3 {
+    font: 900 12px/22px $fontstack;
+ 	  @extend .capitals;
+}
+h4, h5, h6 {
+    font: 400 10px/12px $fontstack;
+ 	  @extend .capitals;
+}
+p {
+	margin: 0 0 1em;
+}
+small, .small {
+	font-size: 0.86666667em;
+	line-height: 1.6em;
+}
+.mini {
+	font-size: 0.733333334em;
+	line-height: 1.6em;
+}
+.capitals {
+  text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.text-muted {
+	color: #98B0B3;
+}
+
+label {
+	&:not(.label-checkbox) {
+		@extend h4;
+	}
+	display: block;
+}

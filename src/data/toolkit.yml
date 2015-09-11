@@ -1,0 +1,16 @@
+colors:
+  primary:
+    Blue:  "#00C8E0"
+    Gold:  "#FFA900"
+  secondary:
+    Black: "#444444"
+    Green: "#71B179"
+    Red:   "#EA1F57"
+    Lighter: "#F2F6F6"
+  grayscale:
+    Black:   "#444444"
+    Darker:  "#98b0b3"
+    Dark:    "#b2ced1"
+    Grey:    "#cadee0"
+    Light:   "#d8e9eb"
+    Lighter: "#F2F6F6"

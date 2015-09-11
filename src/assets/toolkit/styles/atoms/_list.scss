@@ -1,0 +1,19 @@
+ul, ol {
+  margin: 0 0 1em;
+  padding: 0 0 0 1.5em;
+
+  li {
+    margin: 0 0 0.5em;
+  }
+}
+
+.list-sections {
+  border-top: 1px solid $Light;
+  padding: 0;
+  & > li {
+    border-bottom: 1px solid $Light;
+    padding: 0.5em 10px 0.6em;
+    margin: 0;
+    list-style: none;
+  }
+}
