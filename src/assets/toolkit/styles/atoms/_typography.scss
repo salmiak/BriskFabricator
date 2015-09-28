@@ -3,14 +3,30 @@ h1,h2,h3,h4,h5,h6 {
 }
 h1 {
 	font: 300 25px/1.2em $fontstack;
+	small {
+		font-size: 15px;
+		font-weight: 400;
+		@extend .capitals;
+		@extend .text-muted;
+	}
 }
 h2 {
 	  font: 900 15px/20px $fontstack;
 	  @extend .capitals;
+		small {
+			font-size: 12px;
+			font-weight: 400;
+			@extend .text-muted;
+		}
 }
 h3 {
     font: 900 12px/22px $fontstack;
  	  @extend .capitals;
+		small {
+			font-size: 10px;
+			font-weight: 400;
+			@extend .text-muted;
+		}
 }
 h4, h5, h6 {
     font: 400 10px/12px $fontstack;
@@ -32,7 +48,7 @@ small, .small {
 	letter-spacing: 0.1em;
 }
 .text-muted {
-	color: #98B0B3;
+	color: darken(#98B0B3, 15%);
 }
 
 label {
@@ -40,4 +56,9 @@ label {
 		@extend h4;
 	}
 	display: block;
+}
+
+a {
+	color: $Blue;
+	text-decoration: none;
 }

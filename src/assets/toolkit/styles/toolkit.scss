@@ -27,8 +27,16 @@ body {
 	line-height: 1.6em;
 }
 
+.light-gray-with-padding {
+	border-top: 1px solid $Grey;
+	margin: 0 -10px;
+	padding: 5px 10px;
+	background: $Lighter;
+	box-shadow: inset 0px 2px 1px adjust-color($Light, $alpha:-0.4);
+}
 
 @import 'atoms/typography';
 @import 'atoms/button';
 @import 'atoms/input';
 @import 'atoms/list';
+@import 'atoms/tabs';

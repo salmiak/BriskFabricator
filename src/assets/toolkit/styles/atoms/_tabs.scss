@@ -1,0 +1,35 @@
+.briskTabControls {
+				border-bottom: 1px solid $Grey;
+				padding-bottom: 0;
+}
+.briskTab {
+        @extend h4;
+				padding: 4px 9px 3px;
+				display: inline-block;
+				margin-right: 5px;
+				position: relative;
+				border-radius: 2px 2px 0 0;
+				border-bottom: 0;
+				margin-bottom: -1px;
+				&.active {
+								background: white;
+								border: 1px solid $Grey;
+								border-bottom: 1px solid white;
+				}
+}
+.briskTabNumber {
+				background: $Darker;
+				border-radius: 15px;
+				bottom: -3px;
+				color: white;
+				display: inline-block;
+				height: 15px;
+				line-height: 15px;
+				min-width: 15px;
+				overflow: hidden;
+				padding: 0 4px 0 5px;
+				position: relative;
+				margin-right: -2px;
+        text-align: center;
+        box-sizing: border-box;
+}

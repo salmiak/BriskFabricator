@@ -1,31 +1,31 @@
 // Type Checkbox
 
 input[type=checkbox] {
-				outline: none !important;
-				-webkit-appearance: none;
-				appearance: none;
-				outline: none !important;
-				cursor: pointer;
-				transform: scale3d(1, 1, 1);
-				width: 15px;
-				height: 15px;
-				transition: transform 0.15s cubic-bezier(0.085, 1.5, 0.455, 0.9);
-				margin: 4px 0 0;
-				&:active {
-								transform: scale3d(0.7, 0.7, 0.7);
-								transition: none;
-				}
-				&::before {
-								font-family: FontAwesome;
-								font-size: 15px;
-								content: '\F096';
-								width: 15px;
-								height: 15px;
-				}
-				&:checked::before {
-								content: "\F14A";
-								color: $Blue;
-				}
+	outline: none !important;
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none !important;
+	cursor: pointer;
+	transform: scale3d(1, 1, 1);
+	width: 15px;
+	height: 15px;
+	transition: transform 0.15s cubic-bezier(0.085, 1.5, 0.455, 0.9);
+	margin: 4px 0 0;
+	&:active {
+		transform: scale3d(0.7, 0.7, 0.7);
+		transition: none;
+	}
+	&::before {
+		font-family: FontAwesome;
+		font-size: 15px;
+		content: '\F096';
+		width: 15px;
+		height: 15px;
+	}
+	&:checked::before {
+		content: "\F14A";
+		color: $Blue;
+	}
 }
 
 // Type text field & Co.
@@ -56,15 +56,43 @@ input[type=checkbox] {
   }
   &[type=search] {
     border-radius: $size/2;
-    padding: 0 7px;
   }
 }
 
-input:not([type=checkbox]),
-textarea {
+input:not([type=checkbox]) {
   @include input-style(30px);
 }
 
-input:not([type=checkbox]).input-sm {
+input:not([type=checkbox]).input-sm,
+textarea {
     @include input-style(26px);
+}
+textarea {
+  height: auto;
+  line-height: 1.5;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+select {
+  @include input-style(30px);
+  position: relative;
+  &:active, &:focus {
+    border-color: $Darker;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.125);
+  }
+  &::after {
+    content: "\F0D7";
+    display: block;
+    position: absolute;
+    right: -100px;
+    top: 0;
+    z-index: 300;
+    width: 14px;
+    height: 14px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
 }
