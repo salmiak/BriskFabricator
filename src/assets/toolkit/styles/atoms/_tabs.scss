@@ -1,35 +1,47 @@
 .briskTabControls {
-				border-bottom: 1px solid $Grey;
-				padding-bottom: 0;
+	border-bottom: 1px solid $Grey;
+	padding-bottom: 0;
+	line-height: 28px;
 }
-.briskTab {
-        @extend h4;
-				padding: 4px 9px 3px;
-				display: inline-block;
-				margin-right: 5px;
-				position: relative;
-				border-radius: 2px 2px 0 0;
-				border-bottom: 0;
-				margin-bottom: -1px;
-				&.active {
-								background: white;
-								border: 1px solid $Grey;
-								border-bottom: 1px solid white;
-				}
+.briskTab, .briskTab.mini {
+  @extend h4;
+	line-height: 24px;
+	padding: 3px 9px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 0;
+	position: relative;
+	border-radius: 2px 2px 0 0;
+	border: 1px solid transparent;
+	top: 1px;
+	cursor: pointer;
+	&.active {
+		background: #FFF;
+		border: 1px solid $Grey;
+		border-bottom: 1px solid white;
+
+	}
+	&:not(.active):hover {
+		background: $Light;
+		border: 1px solid $Light;
+		border-bottom: 1px solid transparent;
+	}
 }
 .briskTabNumber {
-				background: $Darker;
-				border-radius: 15px;
-				bottom: -3px;
-				color: white;
-				display: inline-block;
-				height: 15px;
-				line-height: 15px;
-				min-width: 15px;
-				overflow: hidden;
-				padding: 0 4px 0 5px;
-				position: relative;
-				margin-right: -2px;
-        text-align: center;
-        box-sizing: border-box;
+	$_size: 16px;
+	background: $Darker;
+	border-radius: $_size;
+	color: white;
+	display: inline-block;
+	bottom: -3px;
+	position: relative;
+	height: $_size;
+	line-height: $_size;
+	min-width: $_size;
+	overflow: hidden;
+	padding: 0 3px;
+	margin-right: -2px;
+  text-align: center;
+  box-sizing: border-box;
+	letter-spacing: 0;
 }
