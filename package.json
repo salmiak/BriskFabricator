@@ -48,5 +48,10 @@
     "run-sequence": "^1.0.2",
     "script-loader": "^0.6.1",
     "webpack": "^1.8.11"
+  },
+  "dependencies": {
+    "helper-markdown": "^0.1.2",
+    "markdown": "^0.5.0",
+    "node-sass": "^3.3.3"
   }
 }
