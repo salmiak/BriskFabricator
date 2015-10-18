@@ -7,7 +7,7 @@ $fontstack: 'Lato', 'Helvetica Neue', Helvetica, Aria, sans-serif;
 
 $Blue:  	#00C8E0;
 $Gold:  	#FFA900;
-$Black: 	#444444;
+$Black: 	#222222;
 $Green: 	#71B179;
 $Red:   	#EA1F57;
 $Lighter: #F2F6F6;
@@ -22,9 +22,10 @@ $Lighter: #F2F6F6;
 body {
 	font-family: Lato, Helvetica, Arial, sans-serif;
 	font-weight: 300;
-	background: #F2F6F6;
+	background: $Lighter;
 	font-size: 15px;
 	line-height: 1.6em;
+	color: $Black;
 }
 
 .light-gray-with-padding {
