@@ -59,6 +59,9 @@ label {
 	&:not(.label-checkbox) {
 		@extend h4;
 	}
+	&.label-checkbox {
+		margin-bottom: 1em;
+	}
 	display: block;
 }
 
