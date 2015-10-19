@@ -1,3 +1,9 @@
+// Header sizes;
+$h1s: 25px;
+$h2s: 15px;
+$h3s: 12px;
+$h4s: 10px;
+
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
 	margin: 0 0 0.65em;
@@ -7,48 +13,62 @@ h1,h2,h3,h4,h5,h6,
 	}*/
 }
 h1, .h1 {
-	font: 300 25px/1.2em $fontstack;
+	font-weight: 300;
+	font-size: $h1s;
+	line-height: 1.2e;
+	font-family: m $fontstack;
 	small, .small, .mini, small.mini {
-		font-size: 15px;
+		font-size: $h2s;
 		font-weight: 400;
 		@extend .capitals;
 		@extend .text-muted;
 	}
 }
 h2, .h2 {
-	  font: 900 15px/20px $fontstack;
+	  font-weight: 900;
+		font-size: $h2s;
+		line-height: 20px;
+		font-family: $fontstack;
 	  @extend .capitals;
 		small, .small, .mini, small.mini {
-			font-size: 12px;
+			font-size: $h3s;
 			font-weight: 400;
 			@extend .text-muted;
 		}
 }
 h3, .h3{
-    font: 900 12px/22px $fontstack;
+    font-weight: 900;
+		font-size: $h3s;
+		line-height: 22px;
+		font-family: $fontstack;
  	  @extend .capitals;
 		small, .small, .mini, small.mini {
-			font-size: 10px;
+			font-size: $h4s;
 			font-weight: 400;
 			@extend .text-muted;
 		}
 }
 h4, .h4, h5, .h5, h6, .h6 {
-    font: 400 10px/12px $fontstack;
+    font-weight: 400;
+		font-size: $h4s;
+		line-height: 12px;
+		font-family: $fontstack;
  	  @extend .capitals;
 }
 p {
 	margin: 0 0 1em;
 }
 small, .small {
-	font-size: 0.86666667em;
+	font-size: 12px;
 	line-height: 1.6em;
+	font-weight: 400;
 }
 .mini {
-	font-size: 0.733333334em;
+	font-size: 10px;
 	line-height: 1.6em;
+	font-weight: 400;
 }
-.capitals {
+.capitals, .text-capitals {
   text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
