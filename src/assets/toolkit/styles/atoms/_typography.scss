@@ -90,3 +90,22 @@ a {
 	color: $Blue;
 	text-decoration: none;
 }
+
+.label {
+	@extend .capitals;
+	@extend .small;
+	padding: .2em .3em .2em .43em;
+	border-radius: 2px;
+	font-weight: 900;
+	color: White;
+	display: inline;
+	line-height: 1em;
+	text-align: center;
+	white-space: nowrap;
+  vertical-align: baseline;
+
+	&-default { background-color: $Darker; }
+	&-primary { background-color: $Blue; }
+	&-danger { background-color: $Red; }
+	&-warning { background-color: $Gold; }
+}
