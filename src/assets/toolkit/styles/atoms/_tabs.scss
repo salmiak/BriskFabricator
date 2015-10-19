@@ -2,6 +2,9 @@
 	border-bottom: 1px solid $Grey;
 	padding-bottom: 0;
 	line-height: 28px;
+	* {
+		line-height: 28px;
+	}
 }
 .briskTab, .briskTab.mini {
   @extend h4;
