@@ -1,0 +1,38 @@
+.briskExpanderNumberHeader
+{
+    position: relative;
+
+    margin: -10px;
+    td
+    {
+        vertical-align: top;
+    }
+    h2
+    {
+        margin: 0;
+        padding: 10px;
+    }
+    .briskNumberBox
+    {
+        line-height: 20px;
+
+        min-width: 40px;
+        margin: 0;
+        padding: 10px;
+
+        text-align: center;
+        letter-spacing: 0;
+
+        border: none !important; // Fix for Legacy CSS
+        background-color: $Lighter;
+
+        @extend .h2;
+
+        img
+        {
+            display: block;
+
+            margin: 0;
+        }
+    }
+}
