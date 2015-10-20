@@ -1,111 +1,146 @@
+@mixin btnStates($btnColor, $textColor)
+{
+    color: $textColor;
+    border-color: darken($btnColor, 10%);
+    background-color: $btnColor;
 
+    $_color: $btnColor;
+    &:hover,
+    &:focus
+    {
+        text-decoration: none;
 
-@mixin btnStates($btnColor, $textColor) {
-	$_color: $btnColor;
-	color: $textColor;
-	background-color: $_color;
-	border-color: darken($_color, 10%);
-	&:hover, &:focus {
-		background-color: darken($_color, 5%);
-		border-color: darken($_color, 15%);
-		text-decoration: none;
-	}
-	&:active, &:active:focus {
-		background-color: darken($_color, 5%);
-		border-color: darken($_color, 15%);
-		box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.125);
-	}
+        border-color: darken($_color, 15%);
+        background-color: darken($_color, 5%);
+    }
+    &:active,
+    &:active:focus
+    {
+        border-color: darken($_color, 15%);
+        background-color: darken($_color, 5%);
+        box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, .125);
+    }
 }
 
-.btn {
-				@extend .capitals;
-				font-weight: 900;
-				display: inline-block;
-				margin-bottom: 0;
-				text-align: center;
-				vertical-align: middle;
-				touch-action: manipulation;
-				cursor: pointer;
-				border: 1px solid $Dark;
-				white-space: nowrap;
-				border-radius: 2px;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-				color: $Black;
-				background-color: transparent;
-				outline: none !important;
-				padding: 5px 10px;
-				font-size: 14px;
-				line-height: 1.5;
-				&:hover, &:focus {
-								color: $Black;
-								background-color: $Light;
-								border-color: $Dark;
-								text-decoration: none;
-				}
-				&:active, &:active:focus {
-								color: $Black;
-								background-color: $Light;
-								border-color: $Dark;
-								box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.125);
-				}
-				&.btn {
-					// Sizes
-					&-lg {
-									font-size: 16px;
-									line-height: 1.5;
-									padding: 5px 10px;
-					}
-					&-sm {
-									font-size: 12px;
-									line-height: 1.5;
-									padding: 3px 8px;
-					}
-					&-xs {
-									font-size: 10px;
-									line-height: 1.5;
-									padding: 1px 4px;
-					}
+.btn
+{
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.5;
 
-					// Colors
-					&-primary {
-						@include btnStates($Blue, #FFF);
-					}
-					&-danger {
-						@include btnStates($Red, #FFF);
-					}
-				}
+    display: inline-block;
 
-				// Group
-				&-group {
-					position: relative;
-					display: inline-block;
-					vertical-align: middle;
-					& > .btn {
-						position: relative;
-						float: left;
-					}
-					& > .btn:first-child:not(:last-child) {
-						border-bottom-right-radius: 0;
-						border-top-right-radius: 0;
-					}
-					& > .btn:not(:first-child):not(:last-child) {
-						border-radius: 0;
-					}
-					& > .btn:last-child:not(:first-child) {
-						border-bottom-left-radius: 0;
-						border-top-left-radius: 0;
-					}
-					& .btn + .btn,
-					& .btn + &,
-					& & + .btn,
-					& & + & {
-						margin-left: -1px;
-					}
-					& > .btn:first-child {
-						margin-left: 0;
-					}
-				}
+    margin-bottom: 0;
+    padding: 5px 10px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    color: $Black;
+    border: 1px solid $Dark;
+    border-radius: 2px;
+    outline: none !important;
+    background-color: transparent;
+
+    @extend .capitals;
+    touch-action: manipulation;
+    &:hover,
+    &:focus
+    {
+        text-decoration: none;
+
+        color: $Black;
+        border-color: $Dark;
+        background-color: $Light;
+    }
+    &:active,
+    &:active:focus
+    {
+        color: $Black;
+        border-color: $Dark;
+        background-color: $Light;
+        box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, .125);
+    }
+    &.btn
+    {
+        // Sizes
+        &-lg
+        {
+            font-size: 16px;
+            line-height: 1.5;
+
+            padding: 5px 10px;
+        }
+        &-sm
+        {
+            font-size: 12px;
+            line-height: 1.5;
+
+            padding: 3px 8px;
+        }
+        &-xs
+        {
+            font-size: 10px;
+            line-height: 1.5;
+
+            padding: 1px 4px;
+        }
+
+        // Colors
+        &-primary
+        {
+            @include btnStates($Blue, #fff);
+        }
+        &-danger
+        {
+            @include btnStates($Red, #fff);
+        }
+    }
+
+    // Group
+    &-group
+    {
+        position: relative;
+
+        display: inline-block;
+
+        vertical-align: middle;
+        & > .btn
+        {
+            position: relative;
+
+            float: left;
+        }
+        & > .btn:first-child:not(:last-child)
+        {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        & > .btn:not(:first-child):not(:last-child)
+        {
+            border-radius: 0;
+        }
+        & > .btn:last-child:not(:first-child)
+        {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        & .btn + .btn,
+        & .btn + &,
+        & & + .btn,
+        & & + &
+        {
+            margin-left: -1px;
+        }
+        & > .btn:first-child
+        {
+            margin-left: 0;
+        }
+    }
 }
