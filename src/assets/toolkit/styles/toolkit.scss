@@ -19,6 +19,8 @@ $Lighter: #F2F6F6;
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
 
+@import "reset";
+
 body {
 	font-family: Lato, Helvetica, Arial, sans-serif;
 	font-weight: 300;
@@ -26,6 +28,12 @@ body {
 	font-size: 15px;
 	line-height: 1.6em;
 	color: $Black;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  width: 100%;
 }
 
 @import 'atoms/typography';
